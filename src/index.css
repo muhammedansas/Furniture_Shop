@@ -17,10 +17,27 @@
   html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
   }
   body {
     font-family: var(--font-body);
     color: var(--color-brown);
     background: var(--color-cream);
+    overflow-x: hidden;
   }
+  /* Touch-friendly tap targets on mobile */
+  @media (hover: none) {
+    button, a {
+      -webkit-tap-highlight-color: transparent;
+    }
+  }
+}
+
+/* Hide scrollbar for horizontal category scroll on mobile */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }
